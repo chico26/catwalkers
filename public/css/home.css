@@ -1,0 +1,112 @@
+body {
+	max-width: 2000px;
+	min-width: 827px;
+}
+/*Scrollbar*/
+.vscrollerbase {
+	left: 0 !important;
+}
+/*header,footer*/
+#header, #footer {
+	min-width: 700px;
+}
+/*contenido*/
+#wrapper {
+	background: url('/images/background.jpeg') no-repeat;
+	background-size: 100%;
+	background-position: right;
+	min-width: 700px;
+	min-height: 350px;
+}
+#video {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	overflow: hidden;
+	z-index: -1;
+}
+/*barra de publicaciones en blog*/
+#wrapper_publications_and_arrow {
+	width: 275px;
+	position: absolute;
+}
+#wrapper_all_publications {
+	width: 260px;
+	height: 100%;
+	min-height: 350px;
+	float: left;
+	margin: 0;
+	overflow-x: hidden;
+}
+.wrapper_publication {
+	width: 100%;
+	height: 182px;
+	font-family: Helvetica;
+}
+.header_publication {
+	width: 100%;
+	height: 27px;
+	background: #FFFFFF;
+}
+.title_header_publication {
+	width: 100%;
+	height: 100%;
+	float: left;
+	font-size: 20px;
+	font-weight: bolder;
+	margin: 7px 0 0 8px;
+}
+.wrapper_container_publication {
+	background: #FFFFFF;
+}
+.image_publication {
+	width: 230px;
+	height: 118px;
+	margin: 0 auto;
+}
+.wrapper_text_publication {
+	height: 37px;
+	background: url('/images/border_bottom_publication.png') no-repeat center bottom;
+}
+.text_publication {
+	font-size: 12px;
+	line-height: 16px;
+	color: #58595B;
+	padding: 1px 5px 8px 10px;
+}
+#arrow_publications {
+	width: 15px;
+	height: 30px;
+	float: left;
+	background: url('/images/flecha_barra_lateral.png') no-repeat;
+	cursor: pointer;
+}
+/*Publicidad*/
+.wrapper_sponsor {
+	position: absolute;
+	bottom: 75px;
+	right: 45px;
+	background: #000000;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.header_sponsor {
+	width: 100%;
+	height: 25px;
+}
+.title_header_sponsor {
+	width: 70%;
+	height: 100%;
+	float: left;
+	font: 16px Arial, serif;
+}
+.title_header_sponsor p{
+	margin: 4px 0 0 5px;
+}
+.button_header_sponsor {
+	width: 20px;
+	height: 15px;
+	float: right;
+	background: url('/images/close_white.png') no-repeat;
+	margin: 6px 1px 0 0;
+}
