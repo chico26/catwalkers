@@ -1,19 +1,26 @@
-body{
-	min-height: 617px;
+body {
+	overflow: hidden;
 }
 /*Header, Footer y container*/
-#wrapper, #header, #footer {
+#wrapper {
 	width: 1050px;
 	min-width: 1050px;
+	min-height: 554px;
 	margin: 0 auto;
+}
+#header, #footer {
+	width: 1050px;
+	margin: 0 auto;
+}
+#wrapper_footer, #footer {
+	position: absolute;
+	bottom: 0;
 }
 /*Wrapper*//*Menu*/
 #wrapper_left_menu {
 	width: 150px;
 	height: 100%;
 	float: left;
-}
-#wrapper_left_menu {
 	font-family: Helvetica;
 	font-size: 12px;
 }
@@ -34,8 +41,8 @@ body{
 }
 /*Container*/
 #wrapper_container {
-	width: 900px;
-	height: 100%;
+	right: 1px;
+	position: absolute;
 	float: left;
 }
 #container {
@@ -47,22 +54,79 @@ body{
 	width: 230px;
 	height: 100%;
 	float: left;
-	padding: 0 10px 0 0;
+	margin: 0 10px 0 0;
 }
-.gallery {
+.wrapper_publications {
 	width: 100%;
-	padding: 10px 0 0 0;
+	margin: 10px 0 0 0;
+}
+.image_publication {
+	width: 100%;
+}
+.black_div_publication {
+	width: expresion(100%-1px);
+	position: relative;
+	top: 0px;
+	margin-left: 1px;
+	background: #000000;
+	opacity: 0;
+	z-index: 1;
+}
+.description_publication {
+	position: relative;
+	padding: 10px 5px;
+	font-family: Helvetica;
+	font-size: 12px;
+	color: #FFFFFF;
+	opacity: 0;
+	z-index: 2;
+}
+.title_publication {
+	font-size: 16px;
+	font-weight: bolder;
+	border-bottom: solid 1px #FFFFFF;
+	padding-bottom: 5px;
+}
+.wrapper_content_publication {
+	padding-top: 5px;
+}
+.content_publication {
+	width: 100%;
+	font-family: Helvetica;
+	font-size: 12px;
+	color: #FFFFFF;
+	background: none;
+	resize: none;
+	border: none;
+	overflow-x: hidden;
+	max-height: 50px;
+}
+.date_publication {
+	float: right;
+	font-family: Helvetica;
+	font-size: 10px;
+	color: #FFFFFF;
+	margin-top: 10px;
+}
+.counter_looks_publication {
+	font-family: Helvetica;
+	font-size: 10px;
+	color: #FFFFFF;
+	position: absolute;
+	bottom: 30px;
+	right: 5px;
 }
 #wrapper_advertising {
 	width: 160px;
 	height: 100%;
-	position:fixed;
-    margin-left:720px;
+	position: fixed;
+	top: 30px;
+	margin-left: 720px;
 }
 #advertising {
 	width: 100%;
 	padding: 10px 0 0 0;
 }
-.gallery img, #advertising img {
+.image_publication img, #advertising img {
 	width: 100%;
 }

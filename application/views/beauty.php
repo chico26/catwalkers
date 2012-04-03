@@ -36,23 +36,71 @@
 <div id="wrapper_container">
 	<div id="container">
 		<div class="wrapper_gallery">
-			<?php for($i=0;$i<10;$i++): ?>
-				<div class="gallery">
-					<img src="/images/home_nuevo_catwalkers.jpg" alt=""/>
+			<?php for($i=0;$i<10;$i+=3): ?>
+				<?php  
+					$size_img = getimagesize('images/galeria.jpeg'); 
+					$ideal_height = ($size_img[1]*230)/$size_img[0];
+				?>
+				<div class="wrapper_publications" style="height: <?php echo $ideal_height."px" ?>">
+					<div class="image_publication">
+						<img src="/images/galeria.jpeg" alt=""/>
+					</div>
+					<div class="black_div_publication">
+					</div>
+					<div class="description_publication">
+						<div class="title_publication">Title</div>
+							<div class="wrapper_content_publication">
+								<textarea class="content_publication">blablablablablablablablablablablablablablablablabla</textarea>
+								<div class="date_publication"><p>Posteado: 26/Jun/2012</p></div>
+							</div>
+						<div class="counter_looks_publication">1000</div>
+					</div>
 				</div>
 			<?php endfor; ?>
 		</div>
 		<div class="wrapper_gallery">
-			<?php for($i=0;$i<10;$i++): ?>
-				<div class="gallery">
-					<img src="/images/galeria.jpeg" alt=""/>
+			<?php for($i=1;$i<10;$i+=3): ?>
+				<?php  
+					$size_img = getimagesize('images/calvin.jpeg'); 
+					$ideal_height = ($size_img[1]*230)/$size_img[0];
+				?>
+				<div class="wrapper_publications" style="height: <?php echo $ideal_height."px" ?>">
+					<div class="image_publication">
+						<img src="/images/calvin.jpeg" alt=""/>
+					</div>
+					<div class="black_div_publication">
+					</div>
+					<div class="description_publication">
+						<div class="title_publication">Title</div>
+							<div class="wrapper_content_publication">
+								<textarea class="content_publication">blablablablablablablablablablablablablablablablabla</textarea>
+								<div class="date_publication"><p>Posteado: 26/Jun/2012</p></div>
+							</div>
+						<div class="counter_looks_publication">1000</div>
+					</div>
 				</div>
 			<?php endfor; ?>
 		</div>
 		<div class="wrapper_gallery">
-			<?php for($i=0;$i<10;$i++): ?>
-				<div class="gallery">
-					<img src="/images/galeria.jpeg" alt=""/>
+			<?php for($i=2;$i<10;$i+=3): ?>
+				<?php  
+					$size_img = getimagesize('images/zara_ad.jpg'); 
+					$ideal_height = ($size_img[1]*230)/$size_img[0];
+				?>
+				<div class="wrapper_publications" style="height: <?php echo $ideal_height."px" ?>">
+					<div class="image_publication">
+						<img src="/images/zara_ad.jpg" alt=""/>
+					</div>
+					<div class="black_div_publication">
+					</div>
+					<div class="description_publication">
+						<div class="title_publication">Title</div>
+							<div class="wrapper_content_publication">
+								<textarea class="content_publication">blablablablablablablablablablablablablablablablabla</textarea>
+								<div class="date_publication"><p>Posteado: 26/Jun/2012</p></div>
+							</div>
+						<div class="counter_looks_publication">1000</div>
+					</div>
 				</div>
 			<?php endfor; ?>
 		</div>

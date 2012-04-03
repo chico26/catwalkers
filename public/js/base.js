@@ -1,6 +1,5 @@
 $(document).ready(function() {
-	var height_wrapper = $(window).height() - $('#header').height() - $('#footer').height()
-	$("#wrapper").height(height_wrapper)
+	define_height_wrapper()
 	$('#search').focus(function() {
 		$('#search').val('')
 	})
@@ -21,3 +20,11 @@ $(document).ready(function() {
 		$('#wrapper_proximamente a').html('People')
 	})
 })
+
+$(window).resize(function() {
+	define_height_wrapper()
+})
+
+function define_height_wrapper() {
+	$("#wrapper").height($(window).height() - 60)
+}

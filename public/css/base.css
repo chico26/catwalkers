@@ -1,20 +1,17 @@
-body{
-	overflow: hidden;
-}
 /*css of scrollbar*/
 .scrollgeneric {
 	line-height: 1px;
 	font-size: 1px;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 0px;
 }
 .vscrollerbase {
-	width: 10px;
+	width: 8px;
 	background-color: #efefef;
 }
 .vscrollerbar {
-	width: 10px;
+	width: 8px;
 	background-color: #949599;
 	border: dashed 0px #000000;
 	-moz-border-radius-topleft: 75px;
@@ -31,8 +28,8 @@ body{
 	border-bottom-right-radius: 75px;
 }
 .scrollerjogbox {
-	width: 10px;
-	height: 10px;
+	width: 8px;
+	height: 8px;
 	top: auto;
 	left: auto;
 	bottom: 0px;
@@ -65,7 +62,7 @@ body{
 }
 #header a, #footer a {
 	text-decoration: none;
-	font: 12px Helvetica ;
+	font: 12px Helvetica;
 	color: #FFFFFF;
 }
 #wrapper_logo_header {
@@ -76,7 +73,7 @@ body{
 #wrapper_menu {
 	float: right;
 }
-#wrapper_menu ul{
+#wrapper_menu ul {
 	height: 30px;
 }
 #wrapper_menu ul li {
@@ -84,13 +81,13 @@ body{
 	float: left;
 	padding: 6px 20px;
 }
-#wrapper_search{
-	margin-top:-2px;
+#wrapper_search {
+	margin-top: -2px;
 }
 #search {
-	width:145px;
+	width: 145px;
 	padding-left: 6px;
-	font: 12px Helvetica;	
+	font: 12px Helvetica;
 	border: dashed 0px #000000;
 	-moz-border-radius-topleft: 2px;
 	-moz-border-radius-topright: 2px;
@@ -106,7 +103,7 @@ body{
 	border-bottom-right-radius: 2px;
 }
 /*ESTILOS TEMPORALES*/
-#wrapper_proximamente{
+#wrapper_proximamente {
 	background: #F04C3E;
 	margin-top: 0px;
 }
