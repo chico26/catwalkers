@@ -25,7 +25,7 @@
 	<div id="arrow_publications"></div>
 </div>
 <?php
-$size = getimagesize("images/imagen_de_muestra1.jpg");
+$size = getimagesize("images/zara_ad.jpg");
 ?>
 <div class="wrapper_sponsor" style="width: <?php echo $size[0].'px' ?> ; height:<?php echo ($size[1] + 25).'px' ?> ">
 	<div class="header_sponsor">
@@ -34,6 +34,6 @@ $size = getimagesize("images/imagen_de_muestra1.jpg");
 		</div>
 		<div class="button_header_sponsor"></div>
 	</div>
-	<div class="wrapper_content_sponsor" style="width: <?php echo $size[0].'px' ?> ; height: <?php echo $size[1].'px' ?> "><img src="/images/imagen_de_muestra1.jpg" />
+	<div class="wrapper_content_sponsor" style="width: <?php echo $size[0].'px' ?> ; height: <?php echo $size[1].'px' ?> "><img src="/images/zara_ad.jpg" />
 	</div>
 </div>

@@ -1,17 +1,30 @@
 $(document).ready(function() {
-	fleXenv.fleXcrollMain("wrapper_all_publications");
-	$('.wrapper_sponsor').draggable();
-	setTimeout(events_publications, 4000);
+	fleXenv.fleXcrollMain("wrapper_all_publications")
+	define_height_wrapper()
+	$('.wrapper_sponsor').draggable({
+		scroll : false
+	})
+	$('.button_header_sponsor').click(function() {
+		$('.wrapper_content_sponsor').animate({
+			height : 'toggle'
+		}, 100)
+		$('.header_sponsor').css({
+			'margin-top' : $('.wrapper_content_sponsor').height()+'px'
+		})
+	})
+	setTimeout(function() {
+		events_publications()
+	}, 4000)
 	window_config();
 	arrow_position();
 })
 
 $(window).resize(function() {
 	fleXenv.fleXcrollMain("wrapper_all_publications");
+	define_height_wrapper()
 	window_config();
 	arrow_position();
 })
-
 function window_config() {
 	$("#wrapper_publications_and_arrow").height($(window).height() - $('#header').height() - $('#footer').height())
 	if($("#wrapper").height() < $("#wrapper").width() * .527) {
@@ -70,4 +83,8 @@ function show_publications() {
 	$('#wrapper_all_publications').stop(true, true).animate({
 		'width' : '260px'
 	}, 150);
+}
+
+function define_height_wrapper() {
+	$("#wrapper").height($(window).height() - 60)
 }

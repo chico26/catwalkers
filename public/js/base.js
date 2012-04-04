@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	define_height_wrapper()
 	$('#search').focus(function() {
 		$('#search').val('')
 	})
@@ -24,7 +23,3 @@ $(document).ready(function() {
 $(window).resize(function() {
 	define_height_wrapper()
 })
-
-function define_height_wrapper() {
-	$("#wrapper").height($(window).height() - 60)
-}

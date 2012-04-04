@@ -1,6 +1,7 @@
 body {
 	max-width: 2000px;
 	min-width: 827px;
+	overflow: hidden;
 }
 /*Scrollbar*/
 .vscrollerbase {
@@ -11,8 +12,11 @@ body {
 	min-width: 700px;
 }
 /*contenido*/
+#general_wrapper, #wrapper {
+	width: 100%;
+}
 #wrapper {
-	background: url('/images/background.jpeg') no-repeat;
+	background: url('/images/background.jpg') no-repeat;
 	background-size: 100%;
 	background-position: right;
 	min-width: 700px;
@@ -100,7 +104,7 @@ body {
 	float: left;
 	font: 16px Arial, serif;
 }
-.title_header_sponsor p{
+.title_header_sponsor p {
 	margin: 4px 0 0 5px;
 }
 .button_header_sponsor {

@@ -5,45 +5,58 @@
 			<li class="title_left_menu">Belleza:</li>
 			<li class="subtitle_left_menu">Categorías:</li>
 			<ul>
-				<li><?php echo form_checkbox(array('value'=>'all')) ?> Todos</li>
-				<li><?php echo form_checkbox(array('value'=>'feeding')) ?> Alimentación</li>
-				<li><?php echo form_checkbox(array('value'=>'makeup')) ?> Maquillaje</li>
-				<li><?php echo form_checkbox(array('value'=>'hair')) ?> Pelo</li>
-				<li><?php echo form_checkbox(array('value'=>'skin')) ?> Piel</li>
-				<li><?php echo form_checkbox(array('value'=>'nail')) ?> Uñas</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'all')) ?></div></div> Todos</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'feeding')) ?></div></div> Alimentación</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'makeup')) ?></div></div> Maquillaje</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'hair')) ?></div></div> Pelo</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'skin')) ?></div></div> Piel</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'nail')) ?></div></div> Uñas</li>
 			</ul>
 			<li class="subtitle_left_menu">Color:</li>
 			<ul>
-				<li><?php echo form_checkbox(array('value'=>'allcolors')) ?>Todos</li>
-				<li><?php echo form_checkbox(array('value'=>'yellow')) ?>Amarillo</li>
-				<li><?php echo form_checkbox(array('value'=>'blue')) ?>Azul</li>
-				<li><?php echo form_checkbox(array('value'=>'white')) ?>Blanco</li>
-				<li><?php echo form_checkbox(array('value'=>'coffee')) ?>Café</li>
-				<li><?php echo form_checkbox(array('value'=>'golden')) ?>Dorado</li>
-				<li><?php echo form_checkbox(array('value'=>'gray')) ?>Gris</li>
-				<li><?php echo form_checkbox(array('value'=>'purple')) ?>Morado</li>
-				<li><?php echo form_checkbox(array('value'=>'black')) ?>Negro</li>
-				<li><?php echo form_checkbox(array('value'=>'orange')) ?>Naranja</li>
-				<li><?php echo form_checkbox(array('value'=>'neutral')) ?>Neutrales</li>
-				<li><?php echo form_checkbox(array('value'=>'red')) ?>Rojo</li>
-				<li><?php echo form_checkbox(array('value'=>'pink')) ?>Rosa</li>
-				<li><?php echo form_checkbox(array('value'=>'green')) ?>Verde</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'allcolors')) ?></div></div> Todos</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'yellow')) ?></div></div> Amarillo</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'blue')) ?></div></div> Azul</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'white')) ?></div></div> Blanco</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'coffee')) ?></div></div> Café</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'golden')) ?></div></div> Dorado</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'gray')) ?></div></div> Gris</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'purple')) ?></div></div> Morado</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'black')) ?></div></div> Negro</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'orange')) ?></div></div> Naranja</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'neutral')) ?></div></div> Neutrales</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'red')) ?></div></div> Rojo</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'pink')) ?></div></div> Rosa</li>
+				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'green')) ?></div></div> Verde</li>
 			</ul>
 		</ul>
 		<?php echo form_close() ?>
 	</div>
 </div>
+
+
+<?php 
+		$directorio=opendir('images/imagenes_muestra_galeria/'); 
+		$archivos_no_permitidos = array('.','..');
+		while($archivo = readdir($directorio)) :
+			if(!in_array($archivo,$archivos_no_permitidos)){
+				$photos_array []= $archivo;
+			}
+		endwhile;
+?>
+		
+		
+		
 <div id="wrapper_container">
 	<div id="container">
 		<div class="wrapper_gallery">
-			<?php for($i=0;$i<10;$i+=3): ?>
-				<?php  
-					$size_img = getimagesize('images/galeria.jpeg'); 
-					$ideal_height = ($size_img[1]*230)/$size_img[0];
-				?>
+			<?php 
+			for($i=0;$i<count($photos_array);$i+=3): 
+				$size_img = getimagesize('images/imagenes_muestra_galeria/'.$photos_array[$i]); 
+				$ideal_height = ($size_img[1]*230)/$size_img[0] ?>
 				<div class="wrapper_publications" style="height: <?php echo $ideal_height."px" ?>">
 					<div class="image_publication">
-						<img src="/images/galeria.jpeg" alt=""/>
+						<img src="/images/imagenes_muestra_galeria/<?php echo $photos_array[$i] ?>" alt=""/>
 					</div>
 					<div class="black_div_publication">
 					</div>
@@ -59,14 +72,13 @@
 			<?php endfor; ?>
 		</div>
 		<div class="wrapper_gallery">
-			<?php for($i=1;$i<10;$i+=3): ?>
-				<?php  
-					$size_img = getimagesize('images/calvin.jpeg'); 
-					$ideal_height = ($size_img[1]*230)/$size_img[0];
-				?>
+			<?php 
+			for($i=1;$i<count($photos_array);$i+=3): 
+				$size_img = getimagesize('images/imagenes_muestra_galeria/'.$photos_array[$i]); 
+				$ideal_height = ($size_img[1]*230)/$size_img[0] ?>
 				<div class="wrapper_publications" style="height: <?php echo $ideal_height."px" ?>">
 					<div class="image_publication">
-						<img src="/images/calvin.jpeg" alt=""/>
+						<img src="/images/imagenes_muestra_galeria/<?php echo $photos_array[$i] ?>" alt=""/>
 					</div>
 					<div class="black_div_publication">
 					</div>
@@ -82,14 +94,13 @@
 			<?php endfor; ?>
 		</div>
 		<div class="wrapper_gallery">
-			<?php for($i=2;$i<10;$i+=3): ?>
-				<?php  
-					$size_img = getimagesize('images/zara_ad.jpg'); 
-					$ideal_height = ($size_img[1]*230)/$size_img[0];
-				?>
+			<?php 
+			for($i=2;$i<count($photos_array);$i+=3): 
+				$size_img = getimagesize('images/imagenes_muestra_galeria/'.$photos_array[$i]); 
+				$ideal_height = ($size_img[1]*230)/$size_img[0] ?>
 				<div class="wrapper_publications" style="height: <?php echo $ideal_height."px" ?>">
 					<div class="image_publication">
-						<img src="/images/zara_ad.jpg" alt=""/>
+						<img src="/images/imagenes_muestra_galeria/<?php echo $photos_array[$i] ?>" alt=""/>
 					</div>
 					<div class="black_div_publication">
 					</div>
@@ -107,6 +118,7 @@
 		<div id="wrapper_advertising">
 			<div id="advertising">
 				<img src="/images/calvin.jpeg" alt=""/>
+				<img src="/images/zara_ad.jpg" alt=""/>
 			</div>
 		</div>
 	</div>
