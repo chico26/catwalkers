@@ -1,3 +1,4 @@
+bandForHidePublicationsWhenDocumentReady = 0;
 $(document).ready(function() {
 	fleXenv.fleXcrollMain("wrapper_all_publications")
 	define_height_wrapper()
@@ -13,12 +14,13 @@ $(document).ready(function() {
 		},1)
 	})
 	setTimeout(function() {
-		events_publications()
+		if(bandForHidePublicationsWhenDocumentReady == 0)
+			hide_publications()
 	}, 4000)
+	events_publications();
 	window_config();
 	arrow_position();
 })
-
 $(window).resize(function() {
 	fleXenv.fleXcrollMain("wrapper_all_publications");
 	define_height_wrapper()
@@ -27,7 +29,11 @@ $(window).resize(function() {
 })
 function window_config() {
 	$("#wrapper_publications_and_arrow").height($(window).height() - $('#header').height() - $('#footer').height())
-	if($("#wrapper").height() < $("#wrapper").width() * .527) {
+	$("#wrapper").css({
+		'background-position' : 'center'
+	})
+	/*
+	if($("#wrapper").height() < $("#wrapper").width() * .5) {
 		$("#wrapper").css({
 			'background-position' : 'top'
 		})
@@ -36,7 +42,8 @@ function window_config() {
 			'background-position' : 'right'
 		})
 	}
-	ideal_width = $("#wrapper").height() * 1.9
+	*/
+	ideal_width = $("#wrapper").height() * 2
 	if($("#wrapper").width() < ideal_width) {
 		$("#wrapper").css({
 			'background-size' : ideal_width
@@ -62,7 +69,6 @@ function arrow_position() {
 }
 
 function events_publications() {
-	hide_publications()
 	$('#wrapper_publications_and_arrow').hover(function() {
 		show_publications()
 		clearTimeout(set_time_out)
@@ -80,6 +86,7 @@ function hide_publications() {
 }
 
 function show_publications() {
+	bandForHidePublicationsWhenDocumentReady = 1;
 	$('#wrapper_all_publications').stop(true, true).animate({
 		'width' : '260px'
 	}, 150);

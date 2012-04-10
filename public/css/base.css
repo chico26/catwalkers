@@ -86,7 +86,7 @@
 }
 #search {
 	width: 145px;
-	padding-left: 6px;
+	padding-left: 2px;
 	font: 12px Helvetica;
 	border: dashed 0px #000000;
 	-moz-border-radius-topleft: 2px;
@@ -101,6 +101,7 @@
 	border-top-right-radius: 2px;
 	border-bottom-left-radius: 2px;
 	border-bottom-right-radius: 2px;
+	color: #666666;
 }
 /*ESTILOS TEMPORALES*/
 #wrapper_proximamente {
