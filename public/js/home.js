@@ -8,9 +8,9 @@ $(document).ready(function() {
 		$('.wrapper_content_sponsor').animate({
 			height : 'toggle'
 		}, 1)
-		$('.header_sponsor').css({
+		$('.header_sponsor').animate({
 			'margin-top' : $('.wrapper_content_sponsor').height()+'px'
-		})
+		},1)
 	})
 	setTimeout(function() {
 		events_publications()

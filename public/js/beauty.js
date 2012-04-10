@@ -9,7 +9,6 @@ $(document).ready(function() {
 
 $(window).resize(function() {
 	define_height_wrapper()
-	config_gallery_publications()
 })
 
 function config_gallery_publications() {
@@ -19,10 +18,10 @@ function config_gallery_publications() {
 			'margin-top' : -+$(this).height() - 3 + "px"
 		})
 		$(this).hover(function() {
-			$(this).children('.black_div_publication').stop(true, true).animate({
+			$(this).children('.black_div_publication').stop().animate({
 				opacity : '0.8'
 			}, 400)
-			$(this).children('.description_publication').stop(true, true).animate({
+			$(this).children('.description_publication').stop().animate({
 				opacity : '1'
 			}, 400)
 		}, function() {
