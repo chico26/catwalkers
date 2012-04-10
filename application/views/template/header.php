@@ -1,7 +1,7 @@
 <div id="wrapper_header">
 	<div id="header">
 		<div id="wrapper_logo_header">
-			<img src="/images/logo_header.png" alt="" />
+			<a href="/"><img src="/images/logo_header.png" alt="" /></a>
 		</div>
 		<div id="wrapper_menu">
 			<ul>

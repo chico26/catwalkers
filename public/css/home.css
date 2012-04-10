@@ -88,8 +88,8 @@ body {
 /*Publicidad*/
 .wrapper_sponsor {
 	position: absolute;
-	bottom: 75px;
-	right: 45px;
+	bottom: 50px;
+	right: 20px;
 	color: #FFFFFF;
 	cursor: pointer;
 }
