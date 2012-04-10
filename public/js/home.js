@@ -7,7 +7,7 @@ $(document).ready(function() {
 	$('.button_header_sponsor').click(function() {
 		$('.wrapper_content_sponsor').animate({
 			height : 'toggle'
-		}, 100)
+		}, 1)
 		$('.header_sponsor').css({
 			'margin-top' : $('.wrapper_content_sponsor').height()+'px'
 		})
