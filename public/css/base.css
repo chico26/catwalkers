@@ -1,111 +1,78 @@
-/*css of scrollbar*/
-.scrollgeneric {
-	line-height: 1px;
-	font-size: 1px;
-	position: absolute;
-	top: 0;
-	left: 0px;
+body {
+    overflow: hidden;
 }
-.vscrollerbase {
-	width: 8px;
-	background-color: #efefef;
+/*scrollbar*/
+#ascrail2000 {
+    top: 30px !important;
 }
-.vscrollerbar {
-	width: 8px;
-	background-color: #949599;
-	border: dashed 0px #000000;
-	-moz-border-radius-topleft: 75px;
-	-moz-border-radius-topright: 75px;
-	-moz-border-radius-bottomleft: 75px;
-	-moz-border-radius-bottomright: 75px;
-	-webkit-border-top-left-radius: 75px;
-	-webkit-border-top-right-radius: 75px;
-	-webkit-border-bottom-left-radius: 75px;
-	-webkit-border-bottom-right-radius: 75px;
-	border-top-left-radius: 75px;
-	border-top-right-radius: 75px;
-	border-bottom-left-radius: 75px;
-	border-bottom-right-radius: 75px;
-}
-.scrollerjogbox {
-	width: 8px;
-	height: 8px;
-	top: auto;
-	left: auto;
-	bottom: 0px;
-	right: 0px;
-	background-color: gray;
-}
-.percentagewrap {
-	width: 80%;
-	margin: 0 auto;
-	padding: 10px;
-}
-.fixedwidth {
-	/* a wide div is used for creating horizontal scrollbars for demonstration purposes */
-	width: 550px;
-	height: auto;
-	position: relative;
-	color: #949599;
-	padding: 1px;
-}
+/*Base*/
 /*HEADER*/
 #wrapper_header, #wrapper_footer {
-	width: 100%;
-	height: 30px;
-	background: #000000;
+    width: 100%;
+    height: 30px;
+    background: #000000;
+    z-index: 2;
+}
+#wrapper_header {
+    position: fixed;
+    top: 0
+}
+#wrapper_footer {
+    position: relative;
+    bottom: 0;
 }
 #header, #footer {
-	height: 100%;
-	color: #FFFFFF;
-	z-index: 333;
+    width: 1000px;
+    height: 30px;
+    margin: 0 auto;
+    color: #FFFFFF;
 }
 #header a, #footer a {
-	text-decoration: none;
-	font: 12px Helvetica;
-	color: #FFFFFF;
+    text-decoration: none;
+    font: 12px Helvetica;
+    color: #FFFFFF;
 }
 #wrapper_logo_header {
-	float: left;
-	padding: 4px;
-	margin-left: 10px;
+    float: left;
+    padding: 4px;
+    margin-left: 10px;
 }
 #wrapper_menu {
-	float: right;
+    float: right;
 }
 #wrapper_menu ul {
-	height: 30px;
+    height: 30px;
 }
 #wrapper_menu ul li {
-	height: 18px;
-	float: left;
-	padding: 6px 20px;
+    height: 18px;
+    float: left;
+    padding: 6px 20px;
 }
 #wrapper_search {
-	margin-top: -2px;
+    margin-top: -2px;
 }
 #search {
-	width: 145px;
-	padding-left: 2px;
-	font: 12px Helvetica;
-	border: dashed 0px #000000;
-	-moz-border-radius-topleft: 2px;
-	-moz-border-radius-topright: 2px;
-	-moz-border-radius-bottomleft: 2px;
-	-moz-border-radius-bottomright: 2px;
-	-webkit-border-top-left-radius: 2px;
-	-webkit-border-top-right-radius: 2px;
-	-webkit-border-bottom-left-radius: 2px;
-	-webkit-border-bottom-right-radius: 2px;
-	border-top-left-radius: 2px;
-	border-top-right-radius: 2px;
-	border-bottom-left-radius: 2px;
-	border-bottom-right-radius: 2px;
-	color: #666666;
-}
-/*ESTILOS TEMPORALES*/
-#wrapper_proximamente {
-	background: #F04C3E;
-	margin-top: 0px;
+    width: 145px;
+    padding-left: 2px;
+    font: 12px Helvetica;
+    border: dashed 0px #000000;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color: #666666;
 }
 /*WRAPPER*/
+#wrapper {
+    width: 1000px;
+    margin: 30px auto 0;
+    overflow: hidden;
+}

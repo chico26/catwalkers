@@ -1,6 +1,7 @@
 <?php
 class Home extends CI_Controller {
+	var $data = array();
 	public function index() {
-		structure('home', $this);
+		$this->load->view('home', $this->data);
 	}
 }

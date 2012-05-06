@@ -1,7 +1,7 @@
 <div id="wrapper_header">
 	<div id="header">
 		<div id="wrapper_logo_header">
-			<a href="/"><img src="/images/logo_header.png" alt="" /></a>
+			<?php echo anchor('/',img(array('src'=>'/images/logo_header.png','alt'=>''))); ?>
 		</div>
 		<div id="wrapper_menu">
 			<ul>
@@ -9,7 +9,7 @@
 					<a href="">Moda</a>
 				</li>
 				<li>
-					<a href="">Belleza</a>
+					<?php echo anchor('/beauty','Belleza'); ?>
 				</li>
 				<li>
 					<a href="">Catboys</a>
@@ -17,7 +17,7 @@
 				<li>
 					<a href="">Lifestyle</a>
 				</li>
-				<li id="wrapper_proximamente">
+				<li>
 					<a href="">People</a>
 				</li>
 				<li>
