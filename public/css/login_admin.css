@@ -1,0 +1,38 @@
+#wrapper_footer{
+	position: absolute;
+	bottom: 0px;
+}
+#wrapper{
+	width: 100%;
+	background-color: black;
+	margin: 0 !important;
+}
+.wrapper_login{
+	width: 400px;
+	height: 170px;
+	margin: 0 auto;
+	-moz-box-shadow: 0px 0px 3px #000000;
+	-webkit-box-shadow: 0px 0px 3px #000000;
+	box-shadow: 0px 0px 3px #000000;
+}
+.wrapper_login p{
+	text-align: center;
+	padding-top: 10px;
+}
+.wrapper_form{
+	width: 350px;
+	margin: 30px auto 0;
+}
+.wrapper_form input{
+	border: solid 1px #CCC;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	font-family: Helvetica;
+	font-size: 15px;
+	color: #CCCCCC;
+	float: left;
+}
+.password_input_pass{
+	display: none;
+}

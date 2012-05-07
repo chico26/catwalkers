@@ -66,6 +66,7 @@
 .wrapper_publications {
     width: 100%;
     margin: 10px 0 0 0;
+    cursor: pointer !important;
 }
 .image_publication {
     width: 100%;
@@ -141,4 +142,7 @@
 }
 .image_publication img, #advertising img {
     width: 100%;
+}
+.list_checkbox_filtred input{
+	cursor: pointer;
 }

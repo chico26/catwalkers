@@ -1,7 +1,7 @@
 <div id="wrapper_left_menu">
 	<div id="left_menu">
 		<?php echo form_open() ?>
-		<ul>
+		<ul class="list_checkbox_filtred">
 			<li class="title_left_menu" onclick="show_popup()">Belleza:</li>
 			<li class="subtitle_left_menu">Categorías:</li>
 			<ul>
@@ -52,7 +52,7 @@
 				for($i=$counter_columns;$i<count($photos_array);$i+=3): 
 					$size_img = getimagesize('images/imagenes_muestra_galeria/'.$photos_array[$i]); 
 					$ideal_height = ($size_img[1]*220)/$size_img[0] ?>
-					<div class="wrapper_publications" style="height: <?php echo $ideal_height."px" ?>">
+					<div id="<?php echo 'post_id' ?>" class="wrapper_publications" style="height: <?php echo $ideal_height."px" ?>">
 						<div class="image_publication">
 							<img src="/images/imagenes_muestra_galeria/<?php echo $photos_array[$i] ?>" alt=""/>
 						</div>

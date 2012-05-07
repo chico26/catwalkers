@@ -1,12 +1,5 @@
 $(document).ready(function() {
-	$(document).keydown(function(tecla) {
-		if(tecla.keyCode == 27) {
-			funcionality_popup_inactive();
-		}
-		if(tecla.keyCode == 65) {
-			show_popup();
-		}
-	});
+	eventClickPost();
 });
 var current;
 $(window).resize(function() {
@@ -21,6 +14,19 @@ function show_popup() {
 		}, 'Title', '/beauty/post/5');
 		current = 0;
 	})
+}
+
+function eventClickPost(){
+	$('.wrapper_publications').each(function(){
+		$(this).click(function(){
+			show_popup();
+		})
+	})
+	$(document).keydown(function(tecla) {
+		if(tecla.keyCode == 27) {
+			funcionality_popup_inactive();
+		}
+	});
 }
 
 function funcionality_popup_active() {
@@ -75,6 +81,7 @@ $('.arrow_prev').live("click", function(event) {
 	$('div[rel="' + current + '"]').animate({
 		'opacity' : '1'
 	}, 1000);
+	
 })
 $('.arrow_next').live("click", function(event) {
 	if(current == $('.image_slider').length - 1) {
@@ -93,4 +100,5 @@ $('.arrow_next').live("click", function(event) {
 	$('div[rel="' + current + '"]').animate({
 		'opacity' : '1'
 	}, 1000);
+	
 })
