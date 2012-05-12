@@ -6,16 +6,16 @@
 		<div id="wrapper_menu">
 			<ul>
 				<li>
-					<a href="">Moda</a>
+					<?php echo anchor('/fashion','Moda'); ?>
 				</li>
 				<li>
 					<?php echo anchor('/beauty','Belleza'); ?>
 				</li>
 				<li>
-					<a href="">Catboys</a>
+					<?php echo anchor('/catboys','Catboys'); ?>
 				</li>
 				<li>
-					<a href="">Lifestyle</a>
+					<?php echo anchor('/lifestyle','Lifestyle'); ?>
 				</li>
 				<li>
 					<a href="">People</a>

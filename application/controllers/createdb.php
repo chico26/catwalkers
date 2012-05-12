@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Controller createdb helps with the creation of the database
- *
- * @author juanjo
+ * Controller createdb helps with the creation of the database.
+ * @author Alejandro Gutiérrez.
  */
-class createdb extends CI_Controller {
+ 
+class Createdb extends CI_Controller {
 
     var $data = array();
 
@@ -17,76 +17,64 @@ class createdb extends CI_Controller {
         echo anchor('createdb/generate', 'Generar');
     }
 
+	/*
+	 * This function is responsible for dropping and creating the database, and recreate the tables.
+	 * @author Alejandro Gutiérrez
+	 */
     function generate() {
-        // prints random to avoid confusion
-        echo rand(1, 9999) . "<br />";
-        $this->drop();
-        echo "<br />Tablas eliminadas<br />";
-        echo $this->print_ok() . "Iniciando la creacion de la base de datos...<br />";
+    	$this->dropAndCreateDB();
+        echo $this->print_ok()."initiating the creation of tables from the models...<br />";
         try {
             Doctrine::createTablesFromModels();
-            ## This row must exist at least empty
-            echo "Tablas creadas desde los modelos sin errores <br />" . $this->print_ok();
+            echo $this->print_ok()."tables created successfully.<br />";
         } catch (Exception $e) {
-
-            echo "!Creada con errores<br />";
-
+            echo "!tables created unsuccessfully.<br />";
             $this->print_error($e->getMessage());
-            echo "<br />";
-            //$this->drop();
-            echo "<br />Tablas eliminadas";
         }
     }
-
-    function print_error($message) {
-        ?>
-        El error es:
-        <div style="width: 400px; margin-left: 50px; color: #F00; background-color: #000;"><?php
-        echo str_replace(".", "<br /><br />&nbsp;", $message);
-        ?>
-        </div><?php
-    }
-
-    function print_ok() {
-        ?>
-        <span style="background-color: #0ad101; color: #FFF;">OK</span>
-        <?php
-    }
-
-    /**
-     * Drop all tables in the database, this functions makes a loop trying to drop until there is no constraint problem
-     */
-    function drop() {
-        include APPPATH . '/config/database.php';
-        $database_name = $db['default']['database'];
-        if (!$link = mysql_connect($db['default']['hostname'], $db['default']['username'], $db['default']['password'])) {
+	
+	/*
+	 * This function is called by the function generate, and is responsible to remove and create the
+	 * database (using php-mysql language)
+	 * @author Alejandro Gutiérrez
+	 */
+	function dropAndCreateDB(){
+		include APPPATH . '/config/database.php';
+        $nameDB = $db['default']['database'];
+		if (!$link = mysql_connect($db['default']['hostname'], $db['default']['username'], $db['default']['password'])) {
             die("Could not connect: " . mysql_error());
         }
-        $sql = "SHOW TABLES FROM $database_name";
-        if ($result = mysql_query($sql)) {
-            /* add table name to array */
-            while ($row = mysql_fetch_row($result)) {
-                $found_tables[] = $row[0];
-            }
-        } else {
-            die("Error, could not list tables. MySQL Error: " . mysql_error());
+		$query = "DROP DATABASE $nameDB";
+        if ($result = mysql_query($query)) {
+        	$query = "CREATE DATABASE $nameDB";
+        	if ($result = mysql_query($query)) {
+	        	echo $this->print_ok() . "Database created successfully.<br />";
+	        }else {
+	            die("Error, could not be created Database: ".mysql_error());
+	        }
+        }else {
+            die("Error, could not be found Database: ".mysql_error());
         }
+	}
 
-        if (isset($found_tables)) {
-            $existentes = count($found_tables);
-            foreach ($found_tables as $table_name) {
-                $sql = "DROP TABLE $database_name.$table_name";
-                if ($result = mysql_query($sql)) {
-                    $existentes--;
-                    echo "Success - table $table_name deleted.";
-                }
-            }
-        }else
-            $existentes = 0;
-        if ($existentes > 0) {
-            //$this->drop();
-        }
-    }
+	/*
+	 * Print HTML with error code.
+	 * @author Alejandro Gutiérrez
+	 */
+    function print_error($message) { ?>
+        El error es:
+        <div style="width: 400px; margin-left: 50px; color: #F00; background-color: #000;">
+        	<?php echo str_replace(".", "<br /><br />&nbsp;", $message); ?>
+        </div>
+    <?php }
+
+	/*
+	 * Print HTML with message OK.
+	 * @author Alejandro Gutiérrez
+	 */
+    function print_ok() { ?>
+        <span style="background-color: #0ad101; color: #FFF;">OK</span>
+    <?php }
 
 }
 

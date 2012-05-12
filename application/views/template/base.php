@@ -8,23 +8,26 @@
 		<link rel="StyleSheet" href="/css/reset.css" type="text/css" />
 		<link rel="StyleSheet" href="/css/base.css" type="text/css" />
 		<link rel="StyleSheet" href="/css/popup.css" type="text/css" />
-		<!-- The general javascript files, such as jQuery or jQuery UI -->
-		<script type="text/javascript" src="/js/jquery.min.js"></script>
-		<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+		<link rel="StyleSheet" href="/css/ui-lightness/jquery-ui-1.8.20.custom.css" type="text/css" />
+		<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="/js/jquery-ui-1.8.20.custom.min.js"></script>
 		<script type="text/javascript" src="/js/base.js"></script>
 		<script type='text/javascript' src="/js/jquery.nicescroll.min.js"></script>
 		<script type="text/javascript" src="/js/popup.js"></script>
-		<?php if($this->uri->segment(2)=='post'): ?>
+		<?php if($this->uri->segment(1)=='posts'): ?>
             <link rel="StyleSheet" href="/css/post.css" type="text/css" />
             <script type="text/javascript" src="/js/post.js"></script>
-        <?php else:
-    		if (file_exists('js/' . $this->uri->segment(1) . '.js')) : ?>
+        <?php elseif(in_array($this->uri->segment(1), array('beauty','lifestyle','catboys','fashion'))): ?>
+        	<link rel="StyleSheet" href="/css/gallery.css" type="text/css" />
+            <script type="text/javascript" src="/js/gallery.js"></script>
+        <?php endif ?>
+    	<?php 
+    	if (file_exists('js/' . $this->uri->segment(1) . '.js')) : ?>
     			<script type="text/javascript" src="/js/<?php echo $this -> uri -> segment(1);?>.js"></script>
-    		<?php endif;
-    		if (file_exists('css/' . $this->uri->segment(1) . '.css')) : ?>
-    			<link rel="StyleSheet" href="/css/<?php echo $this -> uri -> segment(1);?>.css" type="text/css" />
-    		<?php endif;
-        endif ?>
+    	<?php endif;
+    	if (file_exists('css/' . $this->uri->segment(1) . '.css')) : ?>
+			<link rel="StyleSheet" href="/css/<?php echo $this -> uri -> segment(1);?>.css" type="text/css" />
+		<?php endif ?>
 	</head>
 	<body>
 		<!-- <video id="video" loop="loop" autoplay="autoplay" preload="auto">

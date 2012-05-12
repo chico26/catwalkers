@@ -41,15 +41,10 @@
 					Nunc in magna ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed luctus eros. Proin a turpis et nisi aliquam gravida nec ut quam. Cras sit amet turpis vel nisl accumsan consequat. Etiam at sem sit amet ligula fermentum lobortis.
 					Nunc in magna ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed luctus eros. Proin a turpis et nisi aliquam gravida nec ut quam. Cras sit amet turpis vel nisl accumsan consequat. Etiam at sem sit amet ligula fermentum lobortis.
 					Nunc in magna ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed luctus eros. Proin a turpis et nisi aliquam gravida nec ut quam. Cras sit amet turpis vel nisl accumsan consequat. Etiam at sem sit amet ligula fermentum lobortis.
-					Nunc in magna ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed luctus eros. Proin a turpis et nisi aliquam gravida nec ut quam. Cras sit amet turpis vel nisl accumsan consequat. Etiam at sem sit amet ligula fermentum lobortis.
-					Nunc in magna ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed luctus eros. Proin a turpis et nisi aliquam gravida nec ut quam. Cras sit amet turpis vel nisl accumsan consequat. Etiam at sem sit amet ligula fermentum lobortis.
 					Nunc in magna ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed luctus eros. Proin a turpis et nisi aliquam gravida nec ut quam. Cras sit amet turpis vel nisl accumsan consequat. Etiam at sem sit amet ligula fermentum lobortis. Donec sed luctus eros. Proin a turpis et nisi aliquam gravida nec ut quam. Cras sit amet turpis vel nisl accumsan consequat. Etiam at sem sit amet ligula fermentum lobortis.
 					Nunc in magna ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed luctus eros. Proin a turpis et nisi aliquam gravida nec ut quam. Cras sit amet turpis vel nisl accumsan consequat. Etiam at sem sit amet ligula fermentum lobortis.
 					Nunc in magna ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed luctus eros. Proin a turpis et nisi aliquam gravida nec ut quam. Cras sit amet turpis vel nisl accumsan consequat. Etiam at sem sit amet ligula fermentum lobortis.
 					Nunc in magna ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed luctus eros. Proin a turpis et nisi aliquam gravida nec ut quam. Cras sit amet turpis vel nisl accumsan consequat. Etiam at sem sit amet ligula fermentum lobortis.
-					Nunc in magna ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed luctus eros. Proin a turpis et nisi aliquam gravida nec ut quam. Cras sit amet turpis vel nisl accumsan consequat. Etiam at sem sit amet ligula fermentum lobortis.
-					Nunc in magna ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed luctus eros. Proin a turpis et nisi aliquam gravida nec ut quam. Cras sit amet turpis vel nisl accumsan consequat. Etiam at sem sit amet ligula fermentum lobortis.
-					Nunc in magna ante
 				</p>
 			</div>
 			<div id="wrapper_credits">

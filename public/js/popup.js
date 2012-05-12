@@ -6,7 +6,7 @@ $(window).resize(function() {
 	position_of_share_popup();
 });
 function show_popup() {
-	$.get('/beauty/post/1', function(data) {
+	$.get('/posts/viewPost/1', function(data) {
 		$('#background_popup').html(data);
 		funcionality_popup_active();
 		history.pushState({

@@ -48,6 +48,9 @@ body {
     float: left;
     padding: 6px 20px;
 }
+#wrapper_menu ul li:last-child {
+    padding: 6px 0 6px 20px !important;
+}
 #wrapper_search {
     margin-top: -2px;
 }
