@@ -31,6 +31,12 @@ function config_gallery_publications() {
 }
 
 function checkbox_funcionlity() {
-	$('.wrapper_checkbox div input').change(function() {($(this).is(':checked')) ? $(this).parent().addClass('checkbox_checked') : $(this).parent().removeClass('checkbox_checked');
+	$('.wrapper_checkbox div input').change(function() {
+		($(this).is(':checked')) ? $(this).parent().addClass('checkbox_radio_checked') : $(this).parent().removeClass('checkbox_radio_checked');
+	});
+	$('.wrapper_radio div input').change(function() {
+		// alert('cambie')
+		$('.wrapper_radio div').removeClass('checkbox_radio_checked');
+		$(this).parent().addClass('checkbox_radio_checked');
 	});
 }
