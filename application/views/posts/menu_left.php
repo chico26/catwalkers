@@ -12,12 +12,12 @@
 			<li class="title_left_menu" onclick="show_popup()">Belleza:</li>
 			<li class="subtitle_left_menu">Categorías:</li>
 			<ul>
-				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'all')) ?></div></div> Todos</li>
-				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'feeding')) ?></div></div> Alimentación</li>
-				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'makeup')) ?></div></div> Maquillaje</li>
-				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'hair')) ?></div></div> Pelo</li>
-				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'skin')) ?></div></div> Piel</li>
-				<li><div class="wrapper_checkbox"><div><?php echo form_checkbox(array('value'=>'nail')) ?></div></div> Uñas</li>
+				<li><div class="wrapper_radio"><div><?php echo form_radio(array('name'=>'radio','value'=>'all')) ?></div></div> Todos</li>
+				<li><div class="wrapper_radio"><div><?php echo form_radio(array('name'=>'radio','value'=>'feeding')) ?></div></div> Alimentación</li>
+				<li><div class="wrapper_radio"><div><?php echo form_radio(array('name'=>'radio','value'=>'makeup')) ?></div></div> Maquillaje</li>
+				<li><div class="wrapper_radio"><div><?php echo form_radio(array('name'=>'radio','value'=>'hair')) ?></div></div> Pelo</li>
+				<li><div class="wrapper_radio"><div><?php echo form_radio(array('name'=>'radio','value'=>'skin')) ?></div></div> Piel</li>
+				<li><div class="wrapper_radio"><div><?php echo form_radio(array('name'=>'radio','value'=>'nail')) ?></div></div> Uñas</li>
 			</ul>
 			<li class="subtitle_left_menu">Color:</li>
 			<ul>
