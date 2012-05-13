@@ -9,9 +9,7 @@ class Post extends Doctrine_Record {
 		));
 		$this -> hasColumn('title', 'string', 255);
 		$this -> hasColumn('description', 'string', 255);
-		$this -> hasColumn('count_of_comments', 'integer');
-		$this -> hasColumn('count_of_views', 'integer');
-		$this -> hasColumn('count_of_looks', 'integer');
+		$this -> hasColumn('type_post', 'string', 255);
 	}
 
 	public function setUp() {
@@ -27,6 +25,21 @@ class Post extends Doctrine_Record {
         	'local'		=> 'post_id',
         	'foreign'	=> 'post_id'
         ));
+	}
+	
+	protected static $instance;
+	
+	public static function getInstance(){
+		if (!isset(self::$instance)) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+	}
+	
+	public function getPosts($typePosts){
+		return Doctrine_Query::create()
+			->from('post')
+			->where('type_post = ?', $typePosts);
 	}
 
 }

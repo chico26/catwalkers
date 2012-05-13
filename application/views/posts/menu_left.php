@@ -1,3 +1,10 @@
+<?php
+/*
+ * Created on May 12, 2012
+ * @author Alejandro Gutiérrez
+ */
+?>
+
 <div id="wrapper_left_menu">
 	<div id="left_menu">
 		<?php echo form_open() ?>
@@ -33,48 +40,3 @@
 		<?php echo form_close() ?>
 	</div>
 </div>
-
-
-<?php 
-		$directorio=opendir('images/imagenes_muestra_galeria/'); 
-		$archivos_no_permitidos = array('.','..');
-		while($archivo = readdir($directorio)) :
-			if(!in_array($archivo,$archivos_no_permitidos)){
-				$photos_array []= $archivo;
-			}
-		endwhile;
-?>
-<div id="wrapper_container">
-		<?php 
-		for($counter_columns=0;$counter_columns<3;$counter_columns++) : ?>
-			<div class="wrapper_gallery">
-				<?php 
-				for($i=$counter_columns;$i<count($photos_array);$i+=3): 
-					$size_img = getimagesize('images/imagenes_muestra_galeria/'.$photos_array[$i]); 
-					$ideal_height = ($size_img[1]*220)/$size_img[0] ?>
-					<div id="<?php echo 'post_id' ?>" class="wrapper_publications" style="height: <?php echo $ideal_height."px" ?>">
-						<div class="image_publication">
-							<img src="/images/imagenes_muestra_galeria/<?php echo $photos_array[$i] ?>" alt=""/>
-						</div>
-						<div class="black_div_publication" >
-						</div>
-						<div class="description_publication">
-							<div class="title_publication">Title</div>
-								<div class="wrapper_content_publication">
-									<p class="content_publication">blablablablablablablablablablablablablablablablabla</p>
-									<div class="date_publication"><p>Posteado: 26/Jun/2012</p></div>
-								</div>
-							<div class="counter_looks_publication">1000</div>
-						</div>
-					</div>
-				<?php endfor; ?>
-			</div>
-		<?php endfor; ?>
-	</div>
-	<div id="wrapper_advertising">
-		<div id="advertising">
-			<div id="banner_long"><img src="/images/calvin.jpeg" alt=""/></div>
-			<div id="banner_short"><img src="/images/zara_ad.jpg" alt=""/></div>
-		</div>
-	</div>
-<!-- </div> -->

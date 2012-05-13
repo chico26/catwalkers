@@ -17,11 +17,9 @@
 		<?php if($this->uri->segment(1)=='posts'): ?>
             <link rel="StyleSheet" href="/css/post.css" type="text/css" />
             <script type="text/javascript" src="/js/post.js"></script>
-        <?php elseif(in_array($this->uri->segment(1), array('beauty','lifestyle','catboys','fashion'))): ?>
-        	<link rel="StyleSheet" href="/css/gallery.css" type="text/css" />
+            <link rel="StyleSheet" href="/css/gallery.css" type="text/css" />
             <script type="text/javascript" src="/js/gallery.js"></script>
-        <?php endif ?>
-    	<?php 
+        <?php endif;
     	if (file_exists('js/' . $this->uri->segment(1) . '.js')) : ?>
     			<script type="text/javascript" src="/js/<?php echo $this -> uri -> segment(1);?>.js"></script>
     	<?php endif;
