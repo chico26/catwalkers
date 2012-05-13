@@ -8,12 +8,14 @@
 		<link rel="StyleSheet" href="/css/reset.css" type="text/css" />
 		<link rel="StyleSheet" href="/css/base.css" type="text/css" />
 		<link rel="StyleSheet" href="/css/popup.css" type="text/css" />
+		<link rel="StyleSheet" href="/css/login.css" type="text/css" />
 		<link rel="StyleSheet" href="/css/ui-lightness/jquery-ui-1.8.20.custom.css" type="text/css" />
 		<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
 		<script type="text/javascript" src="/js/jquery-ui-1.8.20.custom.min.js"></script>
 		<script type="text/javascript" src="/js/base.js"></script>
 		<script type='text/javascript' src="/js/jquery.nicescroll.min.js"></script>
 		<script type="text/javascript" src="/js/popup.js"></script>
+		<script type="text/javascript" src="/js/login.js"></script>
 		<?php if($this->uri->segment(1)=='posts'): ?>
             <link rel="StyleSheet" href="/css/post.css" type="text/css" />
             <script type="text/javascript" src="/js/post.js"></script>
@@ -35,15 +37,15 @@
 		</video> -->
 		<div id="background_popup"></div>
 		<?php
-		$this -> load -> view('/template/header', $this -> data);
+		$this -> load -> view('/template/header', $this);
 		?>
 		<div id="wrapper" class="ui-widget ui-helper-clearfix">
 			<?php
-			$this -> load -> view($view, $this -> data);
+			$this -> load -> view($view, $this);
 			?>
 		</div>
 		<?php
-		$this -> load -> view('/template/footer', $this -> data);
+		$this -> load -> view('/template/footer', $this);
 		?>
 	</body>
 </html>

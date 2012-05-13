@@ -10,7 +10,10 @@ class Posts extends CI_Controller {
 
     public function listing($typePosts, $post_id = FALSE) {
 		$this->data['posts'] = Zircon_Core::from('Post')->getPosts($typePosts)->execute();
+		$this->data['categories'] = Zircon_Core::settings()->getCategories($typePosts);
+		$this->data['subCategories'] = Zircon_Core::settings()->getSubCategories($typePosts, 'Todos');
 		$this->data['post_id'] = $post_id;
+		$this->data['type_post'] = $typePosts;
         structure('gallery_post', $this);
 
     }

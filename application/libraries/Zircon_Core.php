@@ -4,6 +4,10 @@
  * @author Alejandro Gutiérrez
  */
  
+ /*
+  * This file is the core of Zircon project follows a pattern similar to factory design, 
+  * is responsible for obtaining instances of each class in the folder Zircon.
+  */
  class Zircon_Core {
  	
 	protected static $instance;
@@ -14,6 +18,11 @@
 				return Post::getInstance();
 				break;
 		}
+	}
+	
+	public static function settings(){
+		require_once APPPATH.'libraries/Zircon/settings.php';
+		return Settings::getInstance();
 	}
  	
  }

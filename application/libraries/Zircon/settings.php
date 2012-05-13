@@ -6,9 +6,11 @@
 
 class Settings extends CI_Controller {
 	
-	static $typePosts = array(
+	protected static $instance;
+	
+	var $optionsPosts = array(
 		'beauty' => array(
-			'Todos' => array(),
+			'Todos' => array('Colores','Azul','Rojo','Amarillo','Verde','Violeta'),
 			'Alimentación' => array(),
 			'Maquillaje' => array(),
 			'Pelo' => array(),
@@ -16,14 +18,29 @@ class Settings extends CI_Controller {
 			'Uñas' => array()
 		),
 		'fashion'=> array(
-		
+			
 		),
 		'lifestyle' => array(
-		
+			
 		),
 		'catboys' => array(
-		
+			
 		)
 	);
+	
+	public static function getInstance(){
+		if (!isset(self::$instance)) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+	}
+	
+	public function getCategories($typePosts){
+		return $this->optionsPosts[$typePosts];
+	}
+	
+	public function getSubCategories($typePosts, $category){
+		return (isset($this->optionsPosts[$typePosts][$category])) ? $this->optionsPosts[$typePosts][$category]:array();
+	}
 	
 }

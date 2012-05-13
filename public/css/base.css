@@ -15,7 +15,8 @@ body {
 }
 #wrapper_header {
     position: fixed;
-    top: 0
+    top: 0;
+    z-index: 9;
 }
 #wrapper_footer {
     position: relative;
@@ -46,10 +47,20 @@ body {
 #wrapper_menu ul li {
     height: 18px;
     float: left;
-    padding: 6px 20px;
 }
 #wrapper_menu ul li:last-child {
     padding: 6px 0 6px 20px !important;
+}
+#wrapper_menu ul li a{
+    height: 18px;
+    display: block;
+    padding: 8px 20px 4px;
+}
+#wrapper_menu ul li a:hover{
+    background-color: #f14946;
+}
+.menu_login{
+	cursor: pointer;
 }
 #wrapper_search {
     margin-top: -2px;

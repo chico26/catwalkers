@@ -1,38 +1,86 @@
-#wrapper_footer{
-	position: absolute;
-	bottom: 0px;
-}
-#wrapper{
-	width: 100%;
-	background-color: black;
-	margin: 0 !important;
-}
 .wrapper_login{
-	width: 400px;
-	height: 170px;
-	margin: 0 auto;
-	-moz-box-shadow: 0px 0px 3px #000000;
-	-webkit-box-shadow: 0px 0px 3px #000000;
-	box-shadow: 0px 0px 3px #000000;
+	width: 360px;
+    height: 107px;
+    position: absolute;
+    padding: 7px 10px 0;
+    margin-left: -264px;
+    background-color: #3e3e40;
+    -moz-box-shadow: 0px 0px 5px #000000;
+	-webkit-box-shadow: 0px 0px 5px #000000;
+	box-shadow: 0px 0px 5px #000000;
+	display: none;
 }
-.wrapper_login p{
+.wrapper_columns_login{
+	height: 55px;
+}
+.wrapper_login_left{
+	width: 190px;
+	float: left;
 	text-align: center;
-	padding-top: 10px;
 }
-.wrapper_form{
-	width: 350px;
-	margin: 30px auto 0;
+.wrapper_login_right{
+	width: 170px;
+	float: left;
+	text-align: center;
 }
-.wrapper_form input{
-	border: solid 1px #CCC;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
+.wrapper_login_left input, .wrapper_login_right input{
+	width: 90%;
+	border-color: #7e7e7e;
+	background-color: #3e3e40;
+	outline: none;
+	color: #e1e1e1;
+	padding-left: 2px;
+}
+.wrapper_login_left p, .wrapper_login_right p{
 	font-family: Helvetica;
 	font-size: 15px;
-	color: #CCCCCC;
-	float: left;
+	text-align: center;
+	color: #e1e1e1;
 }
-.password_input_pass{
-	display: none;
+.forget_pass{
+	font-family: Helvetica;
+	font-size: 11px !important;
+	text-align: center;
+	color: #b7b7b9 !important;
+	margin-top: 4px;
+}
+.forget_pass:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+.save_session input{
+	width: 15px;
+	float: left;
+	margin-left: 16px;
+}
+.save_session p{
+	float: left;
+	font-family: Helvetica;
+	font-size: 11px !important;
+	text-align: center;
+	color: #b7b7b9 !important;
+	margin-top: 4px;
+}
+.save_session p:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+.btn_login{
+	width: 99.5%;
+	height: 25px;
+	background-color: black;
+	border: none;
+	color: white;
+	font-family: Helvetica;
+	font-size: 15px !important;
+}
+.btn_login:hover{
+	cursor: pointer;
+	color: #e1e1e1;
+	-moz-box-shadow: 0px 0px 1px #000000;
+	-webkit-box-shadow: 0px 0px 1px #000000;
+	box-shadow: 0px 0px 1px #000000;
+}
+.login_error{
+	height: 17px;
 }
