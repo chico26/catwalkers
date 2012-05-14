@@ -18,11 +18,11 @@
 .title_left_menu {
     font-size: 14px;
     font-weight: bolder;
-    padding-bottom: 3px;
+    padding-bottom: 5px;
     border-bottom: 2px solid #3f3f3f;
 }
 .subtitle_left_menu {
-    padding: 10px 0;
+    padding: 10px 0 !important;
     font-size: 13px;
     font-weight: bolder;
 }
@@ -34,6 +34,12 @@
     padding: 1px;
     background: #FFFFFF;
     border: solid 1px #000000;
+}
+.wrapper_radio {
+	margin-right: 4px;
+}
+.wrapper_checkbox{
+	margin-right: 2px;
 }
 .wrapper_checkbox div, .wrapper_radio div {
     width: 5px;

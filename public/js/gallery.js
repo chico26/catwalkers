@@ -17,7 +17,7 @@ function config_gallery_publications() {
 		//show black div on current div hover
 		$(this).hover(function() {
 			$(this).children('.black_div_publication').stop().animate({
-				opacity : '0.8'
+				opacity : '0.6'
 			}, 400)
 			$(this).children('.description_publication').stop().animate({
 				opacity : '1'

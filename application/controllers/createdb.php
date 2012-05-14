@@ -27,6 +27,34 @@ class Createdb extends CI_Controller {
         try {
             Doctrine::createTablesFromModels();
             echo $this->print_ok()."tables created successfully.<br />";
+			for($i = 0; $i < 20; $i++){
+				$post = new Post();
+				$post->title = 'Tutorial numero '.$i;
+				$post->description = 'Post numero '.$i.' de Belleza';
+				$post->type_post = 'beauty';
+				$post->save();
+			}
+			for($i = 0; $i < 15; $i++){
+				$post = new Post();
+				$post->title = 'Tutorial numero '.$i;
+				$post->description = 'Post numero '.$i.' de Moda';
+				$post->type_post = 'fashion';
+				$post->save();
+			}
+			for($i = 0; $i < 16; $i++){
+				$post = new Post();
+				$post->title = 'Tutorial numero '.$i;
+				$post->description = 'Post numero '.$i.' de estilo de vida';
+				$post->type_post = 'lifestyle';
+				$post->save();
+			}
+			for($i = 0; $i < 12; $i++){
+				$post = new Post();
+				$post->title = 'Tutorial numero '.$i;
+				$post->description = 'Post numero '.$i.' de Catboys';
+				$post->type_post = 'catboys';
+				$post->save();
+			}
         } catch (Exception $e) {
             echo "!tables created unsuccessfully.<br />";
             $this->print_error($e->getMessage());
