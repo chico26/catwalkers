@@ -1,3 +1,6 @@
+var infoPosts;
+var current;
+
 $(document).ready(function() {
 	eventClickPost();
 	$('#contact').click(function() {
@@ -5,30 +8,31 @@ $(document).ready(function() {
 	});
 });
 
-var current;
+
 $(window).resize(function() {
 	position_of_share_popup();
 });
 
-function eventClickPost(){
-	$('.wrapper_publications').each(function(){
-		$(this).click(function(){
-			show_popup_post();
-		})
-	})
-} 
-
-function show_popup_post() {
-	$.get('/posts/viewPost/1', function(data) {
-		$('#wrapper_popup').html(data);
+function show_popup_post(post_id) {
+	infoPosts = post_id.split("_")
+	$.get('/posts/viewPost/'+infoPosts[1], function(data) {
+		$('#wrapper_popup').html(data.view);
 		funcionality_popup_post_active();
 		history.pushState({
 			foo : 'bar'
-		}, 'Title', '/beauty/post/5');
+		}, 'Title', '/index.php/posts/listing/'+infoPosts[0]+'/'+infoPosts[1]);
 		current = 0;
-	})
+	}, 'json')
 	events_hide_popup();
 }
+
+function eventClickPost(){
+	$('.wrapper_publications').each(function(){
+		$(this).click(function(){
+			show_popup_post($(this).prop("id"));
+		})
+	})
+} 
 
 function funcionality_popup_post_active() {
 	flag_scroll_all_comments = false;
@@ -55,7 +59,7 @@ function funcionality_popup_post_inactive() {
 	$(' #background_popup,#wrapper_popup, #wrapper_share_looks, #popup_container').fadeOut(500);
 	history.pushState({
 			foo : 'bar'
-		}, 'Title', '/beauty');
+		}, 'Title', '/index.php/posts/listing/'+infoPosts[0]);
 }
 
 function position_of_share_popup() {
