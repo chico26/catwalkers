@@ -35,7 +35,10 @@
 		<source src="/images/background.ogv" type='video/ogg; codecs="theora,vorbis"' />
 		<source src="/images/background.webm" type='video/webm; codecs="vp8,vorbis"' />
 		</video> -->
-		<div id="background_popup"></div>
+		<div id="background_popup">
+		    <div id="wrapper_popup"></div><!-- for posts -->
+		    <div id="popup_container"></div><!-- for contact -->
+		</div>
 		<?php
 		$this -> load -> view('/template/header', $this -> data);
 		?>

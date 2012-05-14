@@ -21,7 +21,7 @@
 					<a href="">People</a>
 				</li>
 				<li>
-					<a href="">Contacto</a>
+					<a  id="contact" href="#">Contacto</a>
 				</li>
 				<li>
 					<div id="wrapper_search">
