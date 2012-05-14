@@ -7,6 +7,7 @@
 		<link href="/images/favicon_cat.png" rel="icon" type="image/x-icon" />
 		<link rel="StyleSheet" href="/css/reset.css" type="text/css" />
 		<link rel="StyleSheet" href="/css/home.css" type="text/css" />
+		<link rel="StyleSheet" href="/css/popup.css" type="text/css" />
 		<link rel="StyleSheet" href="/css/login.css" type="text/css" />
 		<!-- The general javascript files, such as jQuery or jQuery UI -->
 		<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
@@ -14,9 +15,13 @@
 		<script type='text/javascript' src="/js/jquery.nicescroll.min.js"></script>
 		<script type="text/javascript" src="/js/home.js"></script>
 		<script type="text/javascript" src="/js/base.js"></script>
+		<script type="text/javascript" src="/js/popup.js"></script>
 		<script type="text/javascript" src="/js/login.js"></script>
 	</head>
 	<body>
+	    <div id="background_popup">
+	        <div id="popup_container"></div>
+	    </div>
 		<!-- <video id="video" loop="loop" autoplay="autoplay" preload="auto">
 		<source src="/images/background.mp4" type='video/mp4; codecs="avc1,mp4a"' />
 		<source src="/images/background.ogv" type='video/ogg; codecs="theora,vorbis"' />
